@@ -10,10 +10,10 @@
     <h1>Hello {{user.get("username")}}!</h1>
     <p>This is the index</p>
     <h6>Email: {{user["email"]}}</h6>
-    <h2>My favorite colors</h2>
+    <h3>My favorite colors:</h3>
     <ul>
         {% for color in colors %}
-            {% if color == 'blue' or %}
+            {% if color == 'blue' or 'cyan' %}
                 <li>{{color.title()}}</li>
             {% else %}
                 <li>{{color.lower()}}</li>
