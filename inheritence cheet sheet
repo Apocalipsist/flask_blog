@@ -5,11 +5,21 @@
 
 
 # {% extends 'base.html' %}
-
 # {% block title %}{% endblock %}
-
 # {{ form.email.label }}
-
-
 # {{ form.username.label }}
 # {{ form.username(class="form-control", placeholder='Enter Username') }}
+# {% include 'alerts.html' %}
+# {% block content %}
+# {% endblock %}
+
+
+
+
+
+# Getting the route to allow GET and the end user to also POS (process information)
+# methods = ['GET','POST']
+
+
+# message flashing
+# https://flask.palletsprojects.com/en/2.2.x/patterns/flashing/
