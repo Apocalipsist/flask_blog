@@ -1,5 +1,6 @@
 from flask import render_template
 from app import app
+from app.forms import SignUpForm
 
 # Create a route for our app
 @app.route('/')
@@ -15,4 +16,9 @@ def index():
 
 @app.route('/posts')
 def posts():
-    return render_template('posts.html',)
+    return render_template('posts.html')
+
+@app.route('/signup')
+def signup():
+    forms = SignUpForm()
+    return render_template('signup.html', form=forms)

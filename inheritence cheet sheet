@@ -1,0 +1,15 @@
+# This is my cheatsheet for Inheritence
+
+#Jinja Inheritance 
+# https://jinja.palletsprojects.com/en/3.1.x/templates/#template-inheritance
+
+
+# {% extends 'base.html' %}
+
+# {% block title %}{% endblock %}
+
+# {{ form.email.label }}
+
+
+# {{ form.username.label }}
+# {{ form.username(class="form-control", placeholder='Enter Username') }}
