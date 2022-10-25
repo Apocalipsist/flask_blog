@@ -15,4 +15,4 @@ def index():
 
 @app.route('/posts')
 def posts():
-    return 'Hi this is Posts'
+    return render_template('posts.html',)
