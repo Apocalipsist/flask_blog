@@ -28,6 +28,9 @@ class User(db.Model, UserMixin):
         
     def set_password(self, plain_password):
         self.password = generate_password_hash(plain_password)
+    
+    def check_password(self, password_guess):
+        return check_password_hash(self.password, password_guess)
         
 @login.user_loader
 def load_user(user_id):
