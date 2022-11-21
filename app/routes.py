@@ -31,7 +31,7 @@ def signup():
         print(email,username,password)
         # Check to see if we have a user with username andor password:
         check_user = User.query.filter((User.username == username) | (User.email == email)).first()
-        if check_user not None:
+        if check_user is not None:
             flash('User with username and or password already exists', 'danger')
             return redirect(url_for('signup'))
         # Add new user to database
