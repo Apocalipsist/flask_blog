@@ -13,6 +13,7 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(50), nullable=False, unique=True)
     password = db.Column(db.String(256), nullable=False)
     date_created =db.Column(db.DateTime, nullable=False, default=datetime.utcnow) #ALWAYS store data as UTC time. Universal Time
+    posts = db.relationship('Post', backref='author', lazy='dynamic')
     
     def __init__(self,**kwargs):
         super().__init__(**kwargs)
